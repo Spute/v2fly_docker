@@ -5,12 +5,13 @@ docker build repo for v2fly
 https://hub.docker.com/r/v2fly/v2fly-core
 
 # docker run command
-# ERROR :invalid user: VMessAEAD is enforced and a non VMessAEAD connection is received
-# add V2RAY_VMESS_AEAD_FORCED=false
-sudo docker run -d --name v2ray -e V2RAY_VMESS_AEAD_FORCED=false -v /etc/v2ray:/etc/v2ray -p 16821:16821 v2fly/v2fly-core
+- ERROR :invalid user: VMessAEAD is enforced and a non VMessAEAD connection is received
+- add V2RAY_VMESS_AEAD_FORCED=false
+- `sudo docker run -d --name v2ray -e V2RAY_VMESS_AEAD_FORCED=false -v /etc/v2ray:/etc/v2ray -p 16821:16821 v2fly/v2fly-core`
 
 
 # V2ray config example：
+```
 {
         "log": {
                 "access": "/var/log/v2ray/access.log",
@@ -33,3 +34,4 @@ sudo docker run -d --name v2ray -e V2RAY_VMESS_AEAD_FORCED=false -v /etc/v2ray:/
                 "protocol": "freedom"
         }]
 }
+```
