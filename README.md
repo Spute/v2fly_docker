@@ -35,3 +35,12 @@ https://hub.docker.com/r/v2fly/v2fly-core
         }]
 }
 ```
+
+# error info
+
+- 问题描述：rejected Proxy|VMess|Encoding: invalid user
+- 解决方案使用以下命令同步服务器与客户端的时间
+```
+root@racknerd-3ada11:~# ntpdate -u time.nist.gov
+14 Nov 02:11:42 ntpdate[24551]: adjust time server 132.163.96.4 offset 0.000090 sec
+```
